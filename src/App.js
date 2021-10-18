@@ -12,7 +12,6 @@ import { useState, useEffect } from "react";
 import Map from "./Map";
 import Table from "./Table"
 import { sortData } from "./util";
-import LineGraph from "./LineGraph";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -109,16 +108,17 @@ function App() {
         </div>
 
         {/* Map */}
+        <h3 className="graph__heading">Worldwide Cases</h3>
+
         <Map />
+        
       </div>
       <Card className="app__right">
         <CardContent>
           <h3>Live Cases By Country</h3>
           <Table countries={tableData}/>
           
-          <h3>Worldwide Cases</h3>
-          {/* Graph */}
-          <LineGraph/>
+
         </CardContent>
       </Card>
     </div>
